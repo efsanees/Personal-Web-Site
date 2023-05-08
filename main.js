@@ -23,5 +23,11 @@ function FormKontrol(form){
   var name = form.name.value;
   var mail = form.email.value;
   var mesaj = form.mesaj.value;
-  console.log(name+mail+mesaj);
+  var telefon=form.telefon.value;
+  var dil=form.dil.value;
+  var cinsiyet=form.cinsiyet.value;
+  var file=form.file.value;
+  var şehir=form.şehir.value;
+  var üniversite=form.üniversite.value;
+  console.log(name+mail+mesaj+telefon+dil+cinsiyet+file+şehir+üniversite);
 }
