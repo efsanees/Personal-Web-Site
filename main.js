@@ -22,6 +22,6 @@ function showSlides() {
 function FormKontrol(form){
   var name = form.name.value;
   var mail = form.email.value;
-  var masaj = form.masaj.value;
-  console.log(name+mail+masaj);
+  var mesaj = form.mesaj.value;
+  console.log(name+mail+mesaj);
 }
