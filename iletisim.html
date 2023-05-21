@@ -17,45 +17,47 @@
             <li><a href="./mirasimiz.html">Mirasımız</a></li>
             <li><a href="./giris.html">Giriş</a></li>
             <li><a class="selected" href="iletisim.html">İletişim</a></li>
+            <li><a href="./ilgialanlarım.html">İlgi Alanlarım</a></li>
         </ul>
     </header>
     <div class="container">
         <div class="row">
             <div class="center">
                 <p class="content">Benimle iletişime geçmek için lütfen aşağıdaki formu doldurunuz</p>
-                <form onsubmit="return Formkontrol(this)" action="">
+                <form onsubmit="return Formkontrol(this)" action="sonuc.html" target="_blank">
                     <fieldset>
                         <div class="form-group">
                             <label for="name"><span>İsim : </span></label>
-                            <input class="form-control" type="text" name="name" autofocus placeholder="İsminizi Giriniz...">
+                            <input class="form-control" type="text" name="name" id="name" autofocus placeholder="İsminizi Giriniz...">
                         </div>
                         <div class="form-group">
                             <label for="email"><span>E-mail : </span></label>
-                            <input class="form-control" type="text" name="email" required placeholder="Emailinizi Giriniz...">
+                            <input class="form-control" type="email" name="email" id="email" required placeholder="Emailinizi Giriniz...">
                         </div>
                         <div class="form-group">
                             <label for="telefon"><span>Telefon: </span></label>
-                            <input class="form-control" type="text" name="telefon" pattern=[0-9]{11}>
-                        </div>                    
+                            <input class="form-control" type="text" name="telefon" id="telefon" pattern=[0-9]{11}>
+                        </div>
                         <div class="form-group">
                             <label for="dil">Dil:</label><br>
-                            <label class="checkbox-inline"><input type="checkbox" name="dil" checked> Türkçe</label>
-                            <label class="checkbox-inline"><input type="checkbox" name="dil"> Almanca</label>
-                            <label class="checkbox-inline"><input type="checkbox" name="dil"> İngilizce</label>
-                            <label class="checkbox-inline"><input type="checkbox" name="dil"> Fransızca</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="dil" value="Türkçe" checked> Türkçe</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="dil" value="Almanca"> Almanca</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="dil" value="İngilizce"> İngilizce</label>
+                            <label class="checkbox-inline"><input type="checkbox" name="dil" value="Fransızca"> Fransızca</label>
                         </div>
+                        
                         <div class="form-group">
                             <label for="Cinsiyet">Cinsiyet:</label><br>
-                            <label class="radio-inline"><input type="radio" name="Cinsiyet"> Kadın</label>
-                            <label class="radio-inline"><input type="radio" name="Cinsiyet"> Erkek</label>
-                        </div>
+                            <label class="radio-inline"><input type="radio" name="Cinsiyet" value="Kadın"> Kadın</label>
+                            <label class="radio-inline"><input type="radio" name="Cinsiyet" value="Erkek"> Erkek</label>
+                        </div>                        
                         <div class="form-group">
                             <label for="file">CV ve Fotoğraf:</label><br>
-                            <label class="file"><input type="file" name="file" multiple></label>
+                            <label class="file"><input type="file" name="file" id="cv" multiple></label>
                         </div>
                         <div class="form-group">
                             <label for="Şehir">Şehir:</label><br>
-                            <select name="Şehir">
+                            <select name="Şehir" id="sehir">
                                 <option value="İstanbul">İstanbul</option>
                                 <option value="Ankara">Ankara</option>
                                 <option value="İzmir">İzmir</option>
@@ -65,21 +67,21 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="Üniversite">Üniversite:</label><br>
-                            <input type="text" list="universiteler" autocomplete="on">
+                            <label for="universite">Üniversite:</label><br>
+                            <input type="text" name="universite" list="universiteler" autocomplete="on">
                             <datalist id="universiteler">
-                            <option value="SAÜ">
-                            Sakarya Üniveristesi
-                            </option>
-                            <option value="YTÜ">
-                            Yıldız Teknik Üniversitesi
-                            </option>
-                            <option value="KOÜ">
-                            Kocaeli Üniversitesi
-                            </option>
-                            <option value="İTÜ">
-                            İstanbul Teknik Üniversitesi
-                            </option>
+                                <option value="SAÜ">
+                                Sakarya Üniveristesi
+                                </option>
+                                <option value="YTÜ">
+                                Yıldız Teknik Üniversitesi
+                                </option>
+                                <option value="KOÜ">
+                                Kocaeli Üniversitesi
+                                </option>
+                                <option value="İTÜ">
+                                İstanbul Teknik Üniversitesi
+                                </option>
                             </datalist>
                         </div>
                         <div class="form-group">
@@ -88,7 +90,7 @@
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-success" value="Gönder">
-                            <button class="btn btn-danger">Temizle</button>
+                            <button type="reset" class="btn btn-danger">Temizle</button>
                         </div>
                         
                     </fieldset>
@@ -98,6 +100,6 @@
     </div>
     <footer>
         <p>Efsane Sinanoğlu &copy; 2023</p>
-</footer>
+    </footer>
 </body>
 </html>
