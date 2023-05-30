@@ -31,9 +31,3 @@ function FormKontrol(form){
   var üniversite=form.üniversite.value;
   console.log(name+mail+mesaj+telefon+dil+cinsiyet+file+şehir+üniversite);
 }
-
-function girisKontrol(form){
-  var email=form.email.value;
-  var password=form.password.value;
-  console.log(email+password);
-}
